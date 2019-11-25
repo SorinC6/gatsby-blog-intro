@@ -29,7 +29,9 @@ export default BlogList;
 
 const Root = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 1440px;
+  width: 100%;
   margin-top: 200px;
+  padding: 0 calc((100vw - 80vw) / 2);
 `;
