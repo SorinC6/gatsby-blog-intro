@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
 import styled from "styled-components";
-import LogoSlider from "./LogoSlider";
+// import LogoSlider from "./LogoSlider";
 
 const LogoList = ({ logoData }) => {
   //console.log(logoData);
@@ -13,7 +13,7 @@ const LogoList = ({ logoData }) => {
             return <Logo key={idx} image={item.image} link={item.link} />;
           })}
       </Root>
-      <LogoSlider logoData={logoData} />
+      {/* <LogoSlider logoData={logoData} /> */}
     </>
   );
 };
