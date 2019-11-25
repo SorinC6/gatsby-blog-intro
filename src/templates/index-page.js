@@ -1,25 +1,28 @@
-import React from 'react'
-
-import Layout from '../components/Layout'
+import React from "react";
+import Layout from "../components/Layout";
+import { useHeroData } from "../lib/hooks";
+import Hero from "../components/Hero";
 
 export function IndexPageTemplate({}) {
+  const heroData = useHeroData();
+  console.log(heroData);
   return (
     <>
-      <h1>Index Page</h1>
+      <Hero heroData={heroData} />
     </>
-  )
+  );
 }
 
-IndexPageTemplate.propTypes = {}
+IndexPageTemplate.propTypes = {};
 
 function IndexPage() {
   return (
     <Layout>
       <IndexPageTemplate />
     </Layout>
-  )
+  );
 }
 
-IndexPage.propTypes = {}
+IndexPage.propTypes = {};
 
-export default IndexPage
+export default IndexPage;
