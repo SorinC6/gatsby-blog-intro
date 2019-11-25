@@ -6,27 +6,37 @@ media_folder: static/uploads
 public_folder: /uploads
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'src/pages/blog'
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'blog-post' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
-      - { label: 'Featured Image', name: 'featuredimage', widget: image }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: 'pages'
-    label: 'Pages'
+  - name: "pages"
+    label: "Pages"
     files:
-      - file: 'src/pages/index.md'
-        label: 'Index Page'
-        name: 'index'
+      - file: "src/content/index.md"
+        label: "Index Page"
+        name: "index"
         fields:
-          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'index-page' }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
           - { label: Title, name: title, widget: string }
           - {
               label: Hero,
@@ -50,43 +60,48 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
-          - label: 'Logos'
-            name: 'logos'
-            widget: 'list'
+          - label: "Logos"
+            name: "logos"
+            widget: "list"
             fields:
               - { label: Image, name: image, widget: image }
               - { label: Link, name: link, widget: string }
 
-      - file: 'src/pages/about/index.md'
-        label: 'About'
-        name: 'about'
-        fields:
-          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'about-page' }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-
-      - file: 'src/pages/contact/index.md'
-        label: 'Contact'
-        name: 'contact'
+      - file: "src/content/about/index.md"
+        label: "About"
+        name: "about"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'contact-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
-      - file: 'src/pages/products/index.md'
-        label: 'Products Page'
-        name: 'products'
+      - file: "src/content/contact/index.md"
+        label: "Contact"
+        name: "contact"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'product-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contact-page",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "src/content/products/index.md"
+        label: "Products Page"
+        name: "products"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "product-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
