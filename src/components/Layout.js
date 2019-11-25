@@ -14,9 +14,6 @@ const GlobalStyle = createGlobalStyle`
     body {
       margin: 0;
       color: #555;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-        'Segoe UI Emoji', 'Segoe UI Symbol';
       font-size: 18px;
       line-height: 1.4;
         /* remove margin for the main div that Gatsby mounts into */
@@ -33,7 +30,6 @@ const GlobalStyle = createGlobalStyle`
     h6 {
       color: #222;
       line-height: 1.1;
-
       + * {
       margin-top: 0.5rem;
       }

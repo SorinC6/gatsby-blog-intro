@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import moment from "moment";
 
 export const query = graphql`
   query($slug: String) {
@@ -25,7 +26,7 @@ export function BlogPostTemplate({ title, date, body }) {
   return (
     <Root>
       <h1>{title}</h1>
-      <h6>{date}</h6>
+      <h6>Posted on: {moment(date).format("MMMM Do YYYY, h:mm a")}</h6>
       <div dangerouslySetInnerHTML={{ __html: body }}></div>
     </Root>
   );
