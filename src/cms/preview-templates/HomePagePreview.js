@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 // import { AboutPageTemplate } from "../../templates/about-page";
-import AboutPageTemplate from "../../templates/index-page";
+import AboutPageTemplate from "../../pages/index";
 
 const HomePagePreview = ({ entry, widgetFor }) => (
   <AboutPageTemplate
