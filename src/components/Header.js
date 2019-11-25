@@ -7,11 +7,19 @@ const Header = () => {
   return (
     <Root>
       <Nav>
-        <Link to="/">Home</Link>
-        <Link to="/product">Products</Link>
+        <NavLink to="/" activeClassName="current-page">
+          Home
+        </NavLink>
+        <NavLink to="/product" activeClassName="current-page">
+          Products
+        </NavLink>
         <Icon />
-        <Link to="/blog">Blog</Link>
-        <Link to="/contact">Contact</Link>
+        <NavLink to="/blog" activeClassName="current-page">
+          Blog
+        </NavLink>
+        <NavLink to="/contact" activeClassName="current-page">
+          Contact
+        </NavLink>
       </Nav>
     </Root>
   );
@@ -41,5 +49,15 @@ const Nav = styled.div`
     height: 24px;
     color: #394e5d;
     font-style: SemiBold 20px/24px Montserrat;
+  }
+`;
+
+const NavLink = styled(Link)`
+  &.current-page {
+    color: grey;
+    /* border: 3px solid rgb(1, 1, 1);
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    margin-top: 30px; */
   }
 `;
