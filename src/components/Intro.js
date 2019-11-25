@@ -21,7 +21,7 @@ const Root = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 983px;
+  height: 464px;
   margin: 0 auto;
   margin-top: 264.5px;
 `;
@@ -38,9 +38,11 @@ const TopSection = styled.h2`
 
 const MainSection = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 983px;
+  justify-content: center;
   align-items: center;
+  margin-top: 55px;
 `;
 
 const RightSide = styled.div`
@@ -65,15 +67,13 @@ const RightSide = styled.div`
     font: Regular 18px/33px Montserrat;
     color: #182333;
     font-size: 18px;
-    line-height: 1.3;
+    line-height: 1.5;
   }
 `;
 const ImageBox = styled(Image)`
   width: 236px;
   height: 370px;
-  background: transparent url("img/56217.png") 0% 0% no-repeat padding-box;
-  opacity: 1;
-  margin-top: 55px;
+  background: transparent 0% 0% no-repeat padding-box;
 `;
 
 export default Intro;
