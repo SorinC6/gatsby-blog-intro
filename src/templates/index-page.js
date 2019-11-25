@@ -1,13 +1,14 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { useHeroData, useIntroData } from "../lib/hooks";
+import { useHeroData, useIntroData, useLogoData } from "../lib/hooks";
 import Hero from "../components/Hero";
 import Intro from "../components/Intro";
 
 export function IndexPageTemplate({}) {
   const heroData = useHeroData();
   const introData = useIntroData();
-  //console.log(introData);
+  const logoData = useLogoData();
+  console.log(logoData);
   return (
     <>
       <Hero heroData={heroData} />
