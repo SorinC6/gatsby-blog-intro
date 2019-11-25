@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import { useHeroData, useIntroData, useLogoData } from "../lib/hooks";
 import Hero from "../components/Hero";
 import Intro from "../components/Intro";
+import LogoList from "../components/LogoList";
 
 export function IndexPageTemplate({}) {
   const heroData = useHeroData();
@@ -13,6 +14,7 @@ export function IndexPageTemplate({}) {
     <>
       <Hero heroData={heroData} />
       <Intro introData={introData} />
+      <LogoList logoData={logoData} />
     </>
   );
 }
