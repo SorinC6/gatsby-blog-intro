@@ -3,8 +3,6 @@ import styled from "styled-components";
 import PreviewCompatibleImage from "../lib/PreviewCompatibleImage";
 
 const BlogPreview = ({ title, excerpt, image }) => {
-  console.log(title, excerpt, image);
-
   const imageObject = {
     image,
     childImageSharp: image.childImageSharp,

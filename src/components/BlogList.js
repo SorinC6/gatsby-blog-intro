@@ -14,11 +14,10 @@ const BlogList = ({ blogData }) => {
       <Root>
         {blogData &&
           blogData.map(item => {
-            console.log(item);
             const { title, excerpt, image } = item.node.frontmatter;
             const { slug } = item.node.fields;
             return (
-              <Link to={slug}>
+              <Link to={slug} key={slug}>
                 <BlogPreview title={title} excerpt={excerpt} image={image} />
               </Link>
             );

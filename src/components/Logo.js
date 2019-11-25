@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Logos from "../assets/logos.svg";
 
 const Logo = ({ image, link }) => {
-  console.log(image);
   return (
     <Root image={image}>
       <a href={link} target="_blank">
