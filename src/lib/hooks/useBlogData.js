@@ -23,6 +23,9 @@ function useLogoData() {
                 }
                 excerpt
               }
+              fields {
+                slug
+              }
             }
           }
         }

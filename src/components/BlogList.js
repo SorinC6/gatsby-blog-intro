@@ -2,21 +2,25 @@ import React from "react";
 import BlogPreview from "./BlogPreview";
 import styled from "styled-components";
 import Button from "../components/Button";
+import { Link } from "gatsby";
+//import { useSlug } from "../lib/hooks";
 
 const BlogList = ({ blogData }) => {
-  console.log(blogData);
+  //don't need a specific query for slug - get the slug from blogData
+  //const slug = useSlug();
 
   return (
     <>
       <Root>
         {blogData &&
           blogData.map(item => {
+            console.log(item);
+            const { title, excerpt, image } = item.node.frontmatter;
+            const { slug } = item.node.fields;
             return (
-              <BlogPreview
-                title={item.node.frontmatter.title}
-                excerpt={item.node.frontmatter.excerpt}
-                image={item.node.frontmatter.image}
-              />
+              <Link to={slug}>
+                <BlogPreview title={title} excerpt={excerpt} image={image} />
+              </Link>
             );
           })}
       </Root>
@@ -34,6 +38,10 @@ const Root = styled.div`
   width: 100%;
   margin-top: 200px;
   padding: 0 calc((100vw - 80vw) / 2);
+
+  a {
+    text-decoration: none;
+  }
 
   @media (max-width: 400px) {
     margin-top: 50px;
