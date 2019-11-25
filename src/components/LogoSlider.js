@@ -13,8 +13,8 @@ export default class CustomSlider extends Component {
     };
     return (
       <SliderWrapper {...settings}>
-        {this.props.logoData.map(logo => (
-          <Logo />
+        {this.props.logoData.map((logo, idx) => (
+          <Logo key={idx} />
         ))}
       </SliderWrapper>
     );

@@ -9,7 +9,10 @@ const Header = () => {
   const toggleButton = () => {
     setIsActiv(!activ);
   };
+
+  console.log(activ);
   return (
+    <>
       <Root>
         <Nav>
           <HamburgerMenu isActive={activ} toggleButton={toggleButton} />
@@ -28,6 +31,25 @@ const Header = () => {
           </NavLink>
         </Nav>
       </Root>
+      {activ && (
+        <MobileNavigation>
+          <Wrapper>
+            <NavLink to="/" activeClassName="current-page">
+              Home
+            </NavLink>
+          </Wrapper>
+          <NavLink to="/product" activeClassName="current-page">
+            Products
+          </NavLink>
+          <NavLink to="/blog" activeClassName="current-page">
+            Blog
+          </NavLink>
+          <NavLink to="/contact" activeClassName="current-page">
+            Contact
+          </NavLink>
+        </MobileNavigation>
+      )}
+    </>
   );
 };
 
@@ -82,5 +104,25 @@ const HamburgerMenu = styled(HamburgerSpin)`
   display: none;
   @media (max-width: 400px) {
     display: block;
+  }
+`;
+
+const MobileNavigation = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+  height: 250px;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  opacity: 0.9;
+  z-index: 2;
+
+  a {
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-weight: bold;
   }
 `;
