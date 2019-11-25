@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = () => {
+const Button = ({ handleClick }) => {
   return (
     <Root>
-      <Btn>Read More</Btn>
+      <Btn onClick={handleClick}>Read More</Btn>
     </Root>
   );
 };
