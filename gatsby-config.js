@@ -64,6 +64,14 @@ module.exports = {
       }
     },
     "gatsby-plugin-styled-components",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/ 
+        }
+      }
+    },
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ]
 };
