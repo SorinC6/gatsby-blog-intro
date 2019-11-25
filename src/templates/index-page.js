@@ -9,7 +9,7 @@ export function IndexPageTemplate({}) {
   const heroData = useHeroData();
   const introData = useIntroData();
   const logoData = useLogoData();
-  console.log(logoData);
+  //console.log(logoData);
   return (
     <>
       <Hero heroData={heroData} />
