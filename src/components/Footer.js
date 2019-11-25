@@ -35,4 +35,8 @@ const SvgWrapper = styled(Icon)`
   width: 36px;
   height: 32px;
   margin-left: 144px;
+
+  @media (max-width: 400px) {
+    margin-left: 36px;
+  }
 `;
