@@ -26,4 +26,10 @@ const Btn = styled.button`
   font-size: 14px;
   margin-top: 100px;
   cursor: pointer;
+  transition: 500ms;
+
+  &:hover {
+    background: #3d86bf;
+    color: white;
+  }
 `;
