@@ -1,12 +1,15 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-
-import { useSiteMetadata } from '../lib/hooks'
+import React from "react";
+import { Helmet } from "react-helmet";
+import Header from "./Header";
+import { useSiteMetadata } from "../lib/hooks";
 
 function Layout(props) {
-  const { title: defaultTitle, description: defaultDescription } = useSiteMetadata()
-  const title = props.title || defaultTitle
-  const description = props.description || defaultDescription
+  const {
+    title: defaultTitle,
+    description: defaultDescription
+  } = useSiteMetadata();
+  const title = props.title || defaultTitle;
+  const description = props.description || defaultDescription;
 
   return (
     <div>
@@ -21,9 +24,10 @@ function Layout(props) {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
       </Helmet>
+      <Header />
       <main>{props.children}</main>
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
