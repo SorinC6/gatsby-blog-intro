@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import Header from "./Header";
+import Footer from "./Footer";
 import { useSiteMetadata } from "../lib/hooks";
 import { createGlobalStyle } from "styled-components";
 
@@ -63,6 +64,7 @@ function Layout(props) {
       <GlobalStyle />
       <Header />
       <main>{props.children}</main>
+      <Footer />
     </div>
   );
 }

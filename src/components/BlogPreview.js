@@ -21,7 +21,7 @@ const BlogPreview = ({ title, excerpt, image }) => {
 
 export default BlogPreview;
 
-const Root = styled.div`
+const Root = styled.article`
   width: 282px;
   height: 255px;
   font-style: SemiBold 20px/27px Montserrat;
