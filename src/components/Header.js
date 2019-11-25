@@ -10,43 +10,44 @@ const Header = () => {
     setIsActiv(!activ);
   };
 
-  console.log(activ);
   return (
     <>
       <Root>
         <Nav>
           <HamburgerMenu isActive={activ} toggleButton={toggleButton} />
           <NavLink to="/" activeClassName="current-page">
-            Home
+            Home <span>&#9686;</span>
           </NavLink>
           <NavLink to="/product" activeClassName="current-page">
-            Products
+            Products <span>&#9686;</span>
           </NavLink>
           <Icon />
           <NavLink to="/blog" activeClassName="current-page">
-            Blog
+            Blog <span>&#9686;</span>
           </NavLink>
           <NavLink to="/contact" activeClassName="current-page">
-            Contact
+            Contact <span>&#9686;</span>
           </NavLink>
         </Nav>
       </Root>
       {activ && (
         <MobileNavigation>
-          <Wrapper>
-            <NavLink to="/" activeClassName="current-page">
-              Home
-            </NavLink>
-          </Wrapper>
-          <NavLink to="/product" activeClassName="current-page">
+          <MobileLink to="/" activeClassName="current">
+            <span>&#9679;</span>
+            Home
+          </MobileLink>
+          <MobileLink to="/product" activeClassName="current">
+            <span>&#9679;</span>
             Products
-          </NavLink>
-          <NavLink to="/blog" activeClassName="current-page">
+          </MobileLink>
+          <MobileLink to="/blog" activeClassName="current">
+            <span>&#9679;</span>
             Blog
-          </NavLink>
-          <NavLink to="/contact" activeClassName="current-page">
+          </MobileLink>
+          <MobileLink to="/contact" activeClassName="current">
+            <span>&#9679;</span>
             Contact
-          </NavLink>
+          </MobileLink>
         </MobileNavigation>
       )}
     </>
@@ -84,16 +85,28 @@ const Nav = styled.div`
 
 const NavLink = styled(Link)`
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 82px;
   height: 24px;
   color: #394e5d;
-  font-style: SemiBold 20px/24px Montserrat;
+  span {
+    visibility: hidden;
+  }
+
+  &.hover {
+    span {
+      visibility: visible;
+    }
+  }
+
   &.current-page {
-    color: grey;
-    /* border: 3px solid rgb(1, 1, 1);
-    border-top-left-radius: 100% 200%;
-    border-top-right-radius: 100% 200%;
-    margin-top: 30px; */
+    span {
+      visibility: visible;
+      transform: rotate(90deg);
+      color: #4285bc;
+    }
   }
 `;
 
@@ -124,5 +137,22 @@ const MobileNavigation = styled.div`
     margin-bottom: 32px;
     font-size: 20px;
     font-weight: bold;
+    color: #394e5d;
+  }
+`;
+
+const MobileLink = styled(Link)`
+  display: flex;
+  text-decoration: none;
+
+  span {
+    margin-right: 10px;
+    visibility: hidden;
+    color: #4285bc;
+  }
+  &.current {
+    span {
+      visibility: visible;
+    }
   }
 `;
