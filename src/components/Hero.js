@@ -44,12 +44,33 @@ const LeftSide = styled.div`
     color: #394e5d;
     font-size: 22px;
   }
+
+  @media (max-width: 400px) {
+    max-width: 100%;
+    h1 {
+      font-size: 32px;
+      padding-left: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      padding-left: 20px;
+      width: 322px;
+    }
+  }
 `;
 const ImageBox = styled(Image)`
   width: 384px;
   height: 371px;
   background: transparent 0% 0% no-repeat padding-box;
   margin-left: 106px;
+
+  @media (max-width: 400px) {
+    width: 262px;
+    height: 253px;
+    margin: 0;
+    margin-top: 67px;
+  }
 `;
 
 export default Hero;
