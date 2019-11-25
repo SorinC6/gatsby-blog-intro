@@ -56,6 +56,7 @@ function Layout(props) {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
+        
       </Helmet>
       <GlobalStyle />
       <Header />
