@@ -1,9 +1,11 @@
 ---
 templateKey: blog-post
-title: Business Blog Post 1
+title: Business Blog Post 44
 date: 2019-08-10T15:04:10.000Z
+excerpt: >-
+  Vivamus pellentesque sagittis dignissim. Aliquam a nibh rutrum, lobortis
+  lectus congue, tempus magna.
 featuredimage: /uploads/pool.jpg
-excerpt: Vivamus pellentesque sagittis dignissim. Aliquam a nibh rutrum, lobortis lectus congue, tempus magna.
 ---
 ![pool](/uploads/pool.jpg)
 
