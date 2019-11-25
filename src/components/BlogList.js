@@ -34,4 +34,9 @@ const Root = styled.div`
   width: 100%;
   margin-top: 200px;
   padding: 0 calc((100vw - 80vw) / 2);
+
+  @media (max-width: 400px) {
+    margin-top: 50px;
+    padding: 0 20px;
+  }
 `;

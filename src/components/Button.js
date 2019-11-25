@@ -28,6 +28,10 @@ const Btn = styled.button`
   cursor: pointer;
   transition: 500ms;
 
+  @media (max-width: 400px) {
+    margin-top: 20px;
+  }
+
   &:hover {
     background: #3d86bf;
     color: white;
