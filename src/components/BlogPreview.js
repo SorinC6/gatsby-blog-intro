@@ -13,7 +13,7 @@ const BlogPreview = ({ title, excerpt, image }) => {
   return (
     <Root>
       <PreviewCompatibleImage imageInfo={imageObject} />
-      <h4>{title}</h4>
+      <h6>{title}</h6>
       <p>{excerpt}</p>
     </Root>
   );
@@ -23,16 +23,23 @@ export default BlogPreview;
 
 const Root = styled.article`
   width: 282px;
-  height: 255px;
   font-style: SemiBold 20px/27px Montserrat;
+  transition: 500ms;
 
-  h4 {
+  &:hover {
+    box-shadow: 0px 2px 16px #394e5d36;
+    cursor: pointer;
+  }
+
+  h6 {
     margin-top: 21px;
-    font-size: 24px;
+    font-size: 20px;
+    padding: 4px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
     color: #182333;
+    padding: 4px;
   }
 `;
