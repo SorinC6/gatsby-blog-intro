@@ -22,6 +22,10 @@ const Root = styled.div`
   justify-content: center;
   width: 100%;
   margin-top: 246px;
+
+  @media (max-width: 400px) {
+    margin-top: 176px;
+  }
 `;
 
 const LeftSide = styled.div`

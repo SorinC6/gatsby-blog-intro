@@ -10,24 +10,24 @@ const Header = () => {
     setIsActiv(!activ);
   };
   return (
-    <Root>
-      <Nav>
-        <HamburgerMenu isActive={activ} toggleButton={toggleButton} />
-        <NavLink to="/" activeClassName="current-page">
-          Home
-        </NavLink>
-        <NavLink to="/product" activeClassName="current-page">
-          Products
-        </NavLink>
-        <Icon />
-        <NavLink to="/blog" activeClassName="current-page">
-          Blog
-        </NavLink>
-        <NavLink to="/contact" activeClassName="current-page">
-          Contact
-        </NavLink>
-      </Nav>
-    </Root>
+      <Root>
+        <Nav>
+          <HamburgerMenu isActive={activ} toggleButton={toggleButton} />
+          <NavLink to="/" activeClassName="current-page">
+            Home
+          </NavLink>
+          <NavLink to="/product" activeClassName="current-page">
+            Products
+          </NavLink>
+          <Icon />
+          <NavLink to="/blog" activeClassName="current-page">
+            Blog
+          </NavLink>
+          <NavLink to="/contact" activeClassName="current-page">
+            Contact
+          </NavLink>
+        </Nav>
+      </Root>
   );
 };
 

@@ -24,6 +24,9 @@ const Root = styled.div`
   height: 464px;
   margin: 0 auto;
   margin-top: 264.5px;
+  @media (max-width: 400px) {
+    margin-top: 39px;
+  }
 `;
 
 const TopSection = styled.h2`
