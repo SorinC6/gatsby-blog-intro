@@ -18,12 +18,12 @@ export default LogoList;
 
 const Root = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 145px;
   background: #f5f8fa 0% 0% no-repeat padding-box;
   margin-top: 231px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding: 0 calc((100vw - 80vw) / 2);
 `;
