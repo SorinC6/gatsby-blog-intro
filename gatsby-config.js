@@ -27,6 +27,15 @@ module.exports = {
         name: "images"
       }
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    },
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -57,19 +66,11 @@ module.exports = {
         ]
       }
     },
+
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`
-      }
-    },
-    "gatsby-plugin-styled-components",
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /assets/
-        }
       }
     },
     "gatsby-plugin-netlify" // make sure to keep it last in the array
