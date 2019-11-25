@@ -28,12 +28,15 @@ const Root = styled.div`
 
 const TopSection = styled.h2`
   width: 412px;
-  height: 39px;
   text-align: center;
-  font-style: Bold 32px/39px Montserrat;
-  letter-spacing: 0;
   color: #394e5d;
   font-size: 32px;
+
+  @media (max-width: 400px) {
+    width: 334px;
+    font-size: 26px;
+    text-align: left;
+  }
 `;
 
 const MainSection = styled.div`
@@ -43,6 +46,11 @@ const MainSection = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 55px;
+
+  @media (max-width: 400px) {
+    width: 334px;
+    padding: 0 20px;
+  }
 `;
 
 const RightSide = styled.div`
@@ -54,26 +62,40 @@ const RightSide = styled.div`
     width: 254px;
     height: 24px;
     text-align: left;
-    font-style: Bold 20px/24px Montserrat;
-    letter-spacing: 0;
     color: #394e5d;
     font-size: 20px;
   }
 
   p {
     width: 445px;
-    height: 249px;
     text-align: left;
-    font: Regular 18px/33px Montserrat;
     color: #182333;
     font-size: 18px;
     line-height: 1.5;
+  }
+
+  @media (max-width: 400px) {
+    margin-left: 0;
+    padding: 0 20px;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      width: 334px;
+    }
   }
 `;
 const ImageBox = styled(Image)`
   width: 236px;
   height: 370px;
   background: transparent 0% 0% no-repeat padding-box;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
 
 export default Intro;
