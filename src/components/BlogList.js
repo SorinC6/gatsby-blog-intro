@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import BlogPreview from "./BlogPreview";
 import styled from "styled-components";
 import Button from "../components/Button";
 import { Link } from "gatsby";
 //import { useSlug } from "../lib/hooks";
 
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
 const BlogList = ({ blogData }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
   //don't need a specific query for slug - get the slug from blogData
   //const slug = useSlug();
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
 
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  console.log(windowDimensions.width);
   return (
     <>
       <Root>
