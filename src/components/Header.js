@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
+import { HamburgerSpin } from "react-animated-burgers";
 import styled from "styled-components";
 import Icon from "../assets/logo.svg";
 
 const Header = () => {
+  const [activ, setIsActiv] = useState(false);
+  const toggleButton = () => {
+    setIsActiv(!activ);
+  };
   return (
     <Root>
       <Nav>
+        <HamburgerMenu isActive={activ} toggleButton={toggleButton} />
         <NavLink to="/" activeClassName="current-page">
           Home
         </NavLink>
@@ -43,21 +49,38 @@ const Nav = styled.div`
   align-items: center;
   font-size: 20px;
   justify-content: space-between;
-  a {
-    text-decoration: none;
-    width: 82px;
-    height: 24px;
-    color: #394e5d;
-    font-style: SemiBold 20px/24px Montserrat;
+
+  @media (max-width: 400px) {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    a {
+      display: none;
+    }
   }
 `;
 
 const NavLink = styled(Link)`
+  text-decoration: none;
+  width: 82px;
+  height: 24px;
+  color: #394e5d;
+  font-style: SemiBold 20px/24px Montserrat;
   &.current-page {
     color: grey;
     /* border: 3px solid rgb(1, 1, 1);
     border-top-left-radius: 100% 200%;
     border-top-right-radius: 100% 200%;
     margin-top: 30px; */
+  }
+`;
+
+const HamburgerMenu = styled(HamburgerSpin)`
+  position: absolute;
+  left: 0;
+  outline: none;
+  display: none;
+  @media (max-width: 400px) {
+    display: block;
   }
 `;
