@@ -21,14 +21,10 @@ const Root = styled.div`
   /* background-image:${props => `url(${props.image}`}  */
   a {
     display:flex;
+    justify-content:center;
     text-decoration: none;
     color: grey;
   }
-  @media(max-width:400px){
-    display:flex;
-    justify-content:center;
-  }
-
 `;
 
 const SvgWrapper = styled(Logos)`

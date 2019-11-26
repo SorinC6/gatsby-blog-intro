@@ -17,12 +17,14 @@ const LogoList = ({ logoData }) => {
       </Root>
       {/* <LogoSlider logoData={logoData} /> */}
       {/* <SliderTest /> */}
-      <CarouselWrapper autoplay dots={true}>
-        {logoData &&
-          logoData.map((item, idx) => {
-            return <Logo key={idx} image={item.image} link={item.link} />;
-          })}
-      </CarouselWrapper>
+      <MobileView>
+        <CarouselWrapper autoplay dots={true}>
+          {logoData &&
+            logoData.map((item, idx) => {
+              return <Logo key={idx} image={item.image} link={item.link} />;
+            })}
+        </CarouselWrapper>
+      </MobileView>
     </>
   );
 };
@@ -46,6 +48,12 @@ const Root = styled.div`
 `;
 
 const CarouselWrapper = styled(Carousel)`
-  background: #f5f8fa;
   padding: 70px 0;
+  background: #f5f8fa;
+`;
+
+const MobileView = styled.div`
+  @media (min-width: 400px) {
+    display: none;
+  }
 `;

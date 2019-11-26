@@ -31,26 +31,23 @@ const Root = styled.div`
 const LeftSide = styled.div`
   max-width: 801px;
   h1 {
-    width: 429px;
-    height: 57px;
-    letter-spacing: 0;
+    max-width: 429px;
     color: #394e5d;
     font-size: 46px;
-    font-style: SemiBold 46px/57px Montserrat;
     margin-bottom: 20.5px;
   }
 
   p {
     text-align: left;
-    width: 545px;
-    height: 70px;
-    font-style: Regular 22px/27px Montserrat;
+    max-width: 545px;
     color: #394e5d;
     font-size: 22px;
   }
 
   @media (max-width: 400px) {
-    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
     h1 {
       font-size: 32px;
       padding-left: 20px;

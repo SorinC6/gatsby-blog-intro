@@ -47,6 +47,8 @@ const Root = styled.div`
   }
 
   @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     margin-top: 50px;
     padding: 0 20px;

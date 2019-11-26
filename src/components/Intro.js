@@ -29,13 +29,12 @@ const Root = styled.div`
 `;
 
 const TopSection = styled.h2`
-  width: 412px;
+  max-width: 412px;
   text-align: center;
   color: #394e5d;
   font-size: 32px;
 
   @media (max-width: 400px) {
-    width: 334px;
     font-size: 26px;
     text-align: left;
   }
@@ -50,7 +49,6 @@ const MainSection = styled.div`
   margin-top: 55px;
 
   @media (max-width: 400px) {
-    width: 334px;
     padding: 0 20px;
   }
 `;
@@ -60,6 +58,7 @@ const RightSide = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-left: 202px;
+
   h3 {
     width: 254px;
     height: 24px;
@@ -69,7 +68,7 @@ const RightSide = styled.div`
   }
 
   p {
-    width: 445px;
+    max-width: 445px;
     text-align: left;
     color: #182333;
     font-size: 18px;
@@ -86,7 +85,9 @@ const RightSide = styled.div`
 
     p {
       font-size: 16px;
-      width: 334px;
+      /* max-width: 334px; */
+      text-align: justify;
+      text-justify: inter-word;
     }
   }
 `;
