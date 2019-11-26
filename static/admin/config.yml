@@ -27,7 +27,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/content/index.md"
+      - file: "src/content/home/index.md"
         label: "Index Page"
         name: "index"
         fields:
