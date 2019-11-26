@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "./Logo";
 import styled from "styled-components";
 // import LogoSlider from "./LogoSlider";
+import SliderTest from "./BackgroundSlider";
 
 const LogoList = ({ logoData }) => {
   //console.log(logoData);
@@ -14,6 +15,7 @@ const LogoList = ({ logoData }) => {
           })}
       </Root>
       {/* <LogoSlider logoData={logoData} /> */}
+      <SliderTest />
     </>
   );
 };
@@ -26,7 +28,7 @@ const Root = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 145px;
   background: #f5f8fa 0% 0% no-repeat padding-box;
   margin-top: 231px;
   padding: 0 calc((100vw - 80vw) / 2);

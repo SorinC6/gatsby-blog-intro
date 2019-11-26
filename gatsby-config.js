@@ -42,6 +42,13 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `backgrounds`,
+        path: `${__dirname}/src/assets/sliderImg` // wherever background images are stored
+      }
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

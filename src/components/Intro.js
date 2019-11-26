@@ -21,7 +21,6 @@ const Root = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 464px;
   margin: 0 auto;
   margin-top: 264.5px;
   @media (max-width: 400px) {

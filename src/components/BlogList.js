@@ -47,6 +47,7 @@ const Root = styled.div`
   }
 
   @media (max-width: 400px) {
+    width: 100%;
     margin-top: 50px;
     padding: 0 20px;
   }
