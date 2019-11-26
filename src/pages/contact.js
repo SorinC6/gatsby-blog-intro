@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../components/Layout";
+import ContactPageTemplate from "../templates/contact-page";
 
 const Contact = () => {
   return (
-    <Layout>
-      <p>Contact Page</p>
-    </Layout>
+    <>
+      <ContactPageTemplate />
+    </>
   );
 };
 

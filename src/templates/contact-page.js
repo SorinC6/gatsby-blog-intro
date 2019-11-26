@@ -1,25 +1,25 @@
-import React from 'react'
-
-import Layout from '../components/Layout'
+import React from "react";
+import { Root } from "../components/~common/basicPageStyles";
+import Layout from "../components/Layout";
 
 export function ContactPageTemplate({}) {
   return (
-    <>
+    <Root>
       <h1>Contact Page</h1>
-    </>
-  )
+    </Root>
+  );
 }
 
-ContactPageTemplate.propTypes = {}
+ContactPageTemplate.propTypes = {};
 
 function ContactPage() {
   return (
     <Layout>
       <ContactPageTemplate />
     </Layout>
-  )
+  );
 }
 
-ContactPage.propTypes = {}
+ContactPage.propTypes = {};
 
-export default ContactPage
+export default ContactPage;
