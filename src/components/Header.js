@@ -67,6 +67,7 @@ const Root = styled.header`
 
   a {
     font-weight: 600;
+    text-decoration: none;
   }
 `;
 
@@ -96,18 +97,23 @@ const NavLink = styled(Link)`
   height: 24px;
   color: #394e5d;
   span {
-    visibility: hidden;
+    display: none;
+    margin-top: -5px;
   }
 
-  &.hover {
+  &:hover {
+    color: #394e5d;
     span {
-      visibility: visible;
+      display: block;
+      transform: rotate(90deg);
+      color: #4285bc;
+      opacity: 43%;
     }
   }
 
   &.current-page {
     span {
-      visibility: visible;
+      display: block;
       transform: rotate(90deg);
       color: #4285bc;
     }

@@ -16,7 +16,6 @@ export function IndexPageTemplate() {
   const introData = useIntroData();
   const logoData = useLogoData();
   const blogData = useBlogData();
-  //console.log(blogData);
   return (
     <>
       <Hero heroData={heroData} />
