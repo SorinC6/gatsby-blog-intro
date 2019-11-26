@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import BlogPreview from "./BlogPreview";
 import styled from "styled-components";
 import Button from "../components/Button";
@@ -33,6 +34,10 @@ const BlogList = ({ blogData }) => {
 };
 
 export default BlogList;
+
+BlogList.propTypes = {
+  blogData: PropTypes.arrayOf(PropTypes.object.isRequired)
+};
 
 const Root = styled.div`
   display: flex;

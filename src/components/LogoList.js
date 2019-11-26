@@ -7,7 +7,6 @@ import PropTypes from "prop-types";
 import { Carousel } from "antd";
 
 const LogoList = ({ logoData }) => {
-  console.log(logoData);
   return (
     <>
       <Root>
@@ -16,8 +15,6 @@ const LogoList = ({ logoData }) => {
             return <Logo key={idx} image={item.image} link={item.link} />;
           })}
       </Root>
-      {/* <LogoSlider logoData={logoData} /> */}
-      {/* <SliderTest /> */}
       <MobileView>
         <CarouselWrapper autoplay dots={true}>
           {logoData &&

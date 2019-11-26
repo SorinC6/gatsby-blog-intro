@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import PreviewCompatibleImage from "../lib/PreviewCompatibleImage";
 
@@ -18,6 +19,12 @@ const BlogPreview = ({ title, excerpt, image }) => {
 };
 
 export default BlogPreview;
+
+BlogPreview.propTypes = {
+  title: PropTypes.string.isRequired,
+  excerpt: PropTypes.string,
+  image: PropTypes.object
+};
 
 const Root = styled.article`
   width: 282px;
