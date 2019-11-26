@@ -1,15 +1,16 @@
 import React from "react";
 import { Root } from "../components/~common/basicPageStyles";
 import Layout from "../components/Layout";
-import { graphql } from "gatsby";
 import { useAboutData } from "../lib/hooks";
 
 export function AboutPageTemplate(props) {
   const data = useAboutData();
-  console.log(data);
+  // const { title } = data.frontmatter;
+  const { html } = data;
   return (
     <Root>
-      <h1>About Page</h1>
+      {/* <h1>{title}</h1> */}
+      <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </Root>
   );
 }
