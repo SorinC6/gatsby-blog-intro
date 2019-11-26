@@ -33,12 +33,15 @@ const Root = styled.article`
   h6 {
     margin-top: 21px;
     font-size: 20px;
-    padding: 4px;
+    color: #394e5d;
+    padding: 0 10px 10px 10px;
+    font-weight: 600;
   }
 
   p {
     font-size: 14px;
     color: #182333;
-    padding: 4px;
+    padding: 0 10px;
+    font-weight: 300;
   }
 `;

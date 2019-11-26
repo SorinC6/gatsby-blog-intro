@@ -54,7 +54,7 @@ function Layout(props) {
         <title>{title}</title>
         <meta name="description" content={description} />
         <link
-          href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+          href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap"
           rel="stylesheet"
         />
         <meta name="theme-color" content="#fff" />

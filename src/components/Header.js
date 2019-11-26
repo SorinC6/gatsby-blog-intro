@@ -64,10 +64,14 @@ const Root = styled.header`
   height: 60px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 12px #0000001d;
+
+  a {
+    font-weight: 600;
+  }
 `;
 
 const Nav = styled.div`
-  width: 500px;
+  width: 600px;
   display: flex;
   align-items: center;
   font-size: 20px;

@@ -31,10 +31,10 @@ const Root = styled.div`
 const LeftSide = styled.div`
   max-width: 801px;
   h1 {
-    max-width: 429px;
     color: #394e5d;
     font-size: 46px;
     margin-bottom: 20.5px;
+    font-weight: 600;
   }
 
   p {
@@ -42,12 +42,14 @@ const LeftSide = styled.div`
     max-width: 545px;
     color: #394e5d;
     font-size: 22px;
+    font-weight: 300;
   }
 
   @media (max-width: 400px) {
     width: 100%;
-    align-items: center;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     h1 {
       font-size: 32px;
       padding-left: 20px;

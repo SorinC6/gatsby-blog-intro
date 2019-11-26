@@ -9,7 +9,7 @@ const Intro = ({ introData }) => {
       <MainSection>
         <ImageBox fluid={introData.image.childImageSharp.fluid} alt="dd" />
         <RightSide>
-          <h3>{introData.subheading}</h3>
+          <h2>{introData.subheading}</h2>
           <p>{introData.description}</p>
         </RightSide>
       </MainSection>
@@ -29,10 +29,10 @@ const Root = styled.div`
 `;
 
 const TopSection = styled.h2`
-  max-width: 412px;
   text-align: center;
   color: #394e5d;
   font-size: 32px;
+  font-weight: bold;
 
   @media (max-width: 400px) {
     font-size: 26px;
@@ -59,12 +59,12 @@ const RightSide = styled.div`
   justify-content: center;
   margin-left: 202px;
 
-  h3 {
-    width: 254px;
-    height: 24px;
+  h2 {
+    width: 260px;
     text-align: left;
     color: #394e5d;
     font-size: 20px;
+    font-weight: bold;
   }
 
   p {
@@ -73,19 +73,19 @@ const RightSide = styled.div`
     color: #182333;
     font-size: 18px;
     line-height: 1.5;
+    font-weight: 300;
   }
 
   @media (max-width: 400px) {
     margin-left: 0;
     padding: 0 20px;
 
-    h3 {
+    h2 {
       font-size: 20px;
     }
 
     p {
       font-size: 16px;
-      /* max-width: 334px; */
       text-align: justify;
       text-justify: inter-word;
     }
