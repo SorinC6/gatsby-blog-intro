@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Logos from "../assets/logos.svg";
 
@@ -13,6 +14,11 @@ const Logo = ({ image, link }) => {
 };
 
 export default Logo;
+
+Logo.propTypes = {
+  image: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
+};
 
 const Root = styled.div`
   font-size: 30px;

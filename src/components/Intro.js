@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Image from "gatsby-image";
 
 const Intro = ({ introData }) => {
-  console.log(introData);
   return (
     <Root>
       <TopSection>{introData.heading}</TopSection>
@@ -107,7 +106,6 @@ const RightSide = styled.div`
 const ImageBox = styled(Image)`
   width: 236px;
   height: 370px;
-  background: transparent 0% 0% no-repeat padding-box;
 
   @media (max-width: 400px) {
     display: none;

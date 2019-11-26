@@ -1,12 +1,13 @@
 import React from "react";
 import Logo from "./Logo";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 // import LogoSlider from "./LogoSlider";
 // import SliderTest from "./BackgroundSlider";
 import { Carousel } from "antd";
 
 const LogoList = ({ logoData }) => {
-  //console.log(logoData);
+  console.log(logoData);
   return (
     <>
       <Root>
@@ -31,6 +32,10 @@ const LogoList = ({ logoData }) => {
 
 export default LogoList;
 
+LogoList.propTypes = {
+  logoData: PropTypes.arrayOf(PropTypes.string)
+};
+
 const Root = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +43,7 @@ const Root = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 145px;
-  background: #f5f8fa 0% 0% no-repeat padding-box;
+  background: #f5f8fa no-repeat;
   margin-top: 231px;
   padding: 0 calc((100vw - 80vw) / 2);
 
