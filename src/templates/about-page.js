@@ -2,25 +2,11 @@ import React from "react";
 import { Root } from "../components/~common/basicPageStyles";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
-
-export const query = graphql`
-  query AboutQuery {
-    allMarkdownRemark(filter: { frontmatter: { title: { eq: "About us" } } }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            path
-          }
-          html
-        }
-      }
-    }
-  }
-`;
+import { useAboutData } from "../lib/hooks";
 
 export function AboutPageTemplate(props) {
-  console.log(props);
+  const data = useAboutData();
+  console.log(data);
   return (
     <Root>
       <h1>About Page</h1>
