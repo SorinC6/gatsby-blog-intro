@@ -62,6 +62,7 @@ collections:
               fields:
                 [
                   { label: Heading, name: heading, widget: string },
+                  { label: Subheading, name: subheading, widget: string },
                   { label: Description, name: description, widget: markdown },
                   { label: Image, name: image, widget: image },
                 ],
