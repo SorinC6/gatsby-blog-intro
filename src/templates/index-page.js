@@ -11,7 +11,7 @@ import Intro from "../components/Intro";
 import LogoList from "../components/LogoList";
 import BlogList from "../components/BlogList";
 
-export function IndexPageTemplate({}) {
+export function IndexPageTemplate() {
   const heroData = useHeroData();
   const introData = useIntroData();
   const logoData = useLogoData();
@@ -27,8 +27,6 @@ export function IndexPageTemplate({}) {
   );
 }
 
-IndexPageTemplate.propTypes = {};
-
 function IndexPage() {
   return (
     <Layout>
@@ -36,7 +34,5 @@ function IndexPage() {
     </Layout>
   );
 }
-
-IndexPage.propTypes = {};
 
 export default IndexPage;

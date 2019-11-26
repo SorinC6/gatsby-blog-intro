@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Image from "gatsby-image";
 
 const Hero = ({ heroData }) => {
-  //console.log(heroData);
+  console.log(heroData);
   return (
     <Root>
       <LeftSide>
@@ -13,6 +14,14 @@ const Hero = ({ heroData }) => {
       <ImageBox fluid={heroData.image.childImageSharp.fluid} alt="dd" />
     </Root>
   );
+};
+
+export default Hero;
+
+Hero.propTypes = {
+  heading: PropTypes.string,
+  image: PropTypes.object,
+  subheading: PropTypes.string
 };
 
 const Root = styled.div`
@@ -75,5 +84,3 @@ const ImageBox = styled(Image)`
     margin-top: 67px;
   }
 `;
-
-export default Hero;
