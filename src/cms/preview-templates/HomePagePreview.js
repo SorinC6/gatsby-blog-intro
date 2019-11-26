@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { AboutPageTemplate } from "../../templates/about-page";
-import AboutPageTemplate from "../../pages/index";
+import HomePage from "../../templates/index-page";
 
 const HomePagePreview = ({ entry, widgetFor }) => (
-  <AboutPageTemplate
+  <HomePage
     page={{
       frontmatter: entry.getIn(["data"]).toJS(),
       html: entry.getIn(["data", "body"]),
@@ -13,7 +12,7 @@ const HomePagePreview = ({ entry, widgetFor }) => (
   />
 );
 
-HomePagePreview.propTypes = {
+HomePage.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
   }),
