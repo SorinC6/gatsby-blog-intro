@@ -11,7 +11,6 @@ function useProductData() {
             node {
               frontmatter {
                 title
-                path
               }
               html
             }
