@@ -1,15 +1,16 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import { Root } from "../components/~common/basicPageStyles";
+import Layout from "../components/Layout";
 
 function NotFoundPage() {
   return (
     <Layout title="Upss… Not Found">
-      <section>
+      <Root>
         <h1>NOT FOUND</h1>
         <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      </section>
+      </Root>
     </Layout>
-  )
+  );
 }
 
-export default NotFoundPage
+export default NotFoundPage;

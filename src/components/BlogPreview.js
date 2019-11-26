@@ -29,7 +29,6 @@ BlogPreview.propTypes = {
 const Root = styled.article`
   width: 282px;
   margin-top: 20px;
-  font-style: SemiBold 20px/27px Montserrat;
   transition: 500ms;
 
   &:hover {
