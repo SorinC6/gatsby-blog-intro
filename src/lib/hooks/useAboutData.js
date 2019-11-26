@@ -19,7 +19,6 @@ function useAboutData() {
       }
     `
   );
-  console.log("QUERY ", data);
   return data.allMarkdownRemark.edges[0].node;
 }
 

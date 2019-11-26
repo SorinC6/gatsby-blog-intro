@@ -1,11 +1,14 @@
 import React from "react";
+import { useContactData } from "../lib/hooks";
 import { Root } from "../components/~common/basicPageStyles";
 import Layout from "../components/Layout";
 
 export function ContactPageTemplate({}) {
+  const data = useContactData();
+  const { html } = data;
   return (
     <Root>
-      <h1>Contact Page</h1>
+      <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </Root>
   );
 }

@@ -5,7 +5,6 @@ import { useAboutData } from "../lib/hooks";
 
 export function AboutPageTemplate(props) {
   const data = useAboutData();
-  // const { title } = data.frontmatter;
   const { html } = data;
   return (
     <Root>

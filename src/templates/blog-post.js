@@ -31,7 +31,7 @@ export function BlogPostTemplate({ title, date, body }) {
 BlogPostTemplate.propTypes = {};
 
 function BlogPost({ data }) {
-  console.log(JSON.stringify(data, undefined, 4));
+  //console.log(JSON.stringify(data, undefined, 4));
   const { title, date } = data.markdownRemark.frontmatter;
   const { html } = data.markdownRemark;
   return (
