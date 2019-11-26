@@ -11,7 +11,6 @@ function useIntroData() {
                 intro {
                   description
                   heading
-                  subheading
                   image {
                     childImageSharp {
                       fluid {
