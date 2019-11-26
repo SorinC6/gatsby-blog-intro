@@ -5,17 +5,13 @@ import Layout from "../components/Layout";
 import moment from "moment";
 
 export const query = graphql`
-  query($slug: String) {
-    allMarkdownRemark(filter: { fields: { slug: { eq: $slug } } }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-          }
-          html
-        }
+  query MyQuery($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        date
       }
+      html
     }
   }
 `;
@@ -35,8 +31,9 @@ export function BlogPostTemplate({ title, date, body }) {
 BlogPostTemplate.propTypes = {};
 
 function BlogPost({ data }) {
-  const { title, date } = data.allMarkdownRemark.edges[0].node.frontmatter;
-  const { html } = data.allMarkdownRemark.edges[0].node;
+  console.log(JSON.stringify(data, undefined, 4));
+  const { title, date } = data.markdownRemark.frontmatter;
+  const { html } = data.markdownRemark;
   return (
     <Layout>
       <BlogPostTemplate title={title} date={date} body={html} />

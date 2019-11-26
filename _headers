@@ -4,18 +4,3 @@ for = "/static/*"
 Cache-Control = "public, max-age=360000"
 
 
-query (
-  $slug:String
-) {
-  allMarkdownRemark(filter: {fields: {slug: {eq: $slug}}}) {
-    edges {
-      node {
-        frontmatter {
-          title
-          
-        }
-        html
-      }
-    }
-  }
-}
