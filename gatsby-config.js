@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Recrut Be",
+    title: "Sorin Blog",
     description: "simple business website using Gatsby and NetlifyCMS"
   },
   plugins: [

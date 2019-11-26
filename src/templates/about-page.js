@@ -3,7 +3,7 @@ import { Root } from "../components/~common/basicPageStyles";
 import Layout from "../components/Layout";
 import { useAboutData } from "../lib/hooks";
 
-export function AboutPageTemplate(props) {
+export function AboutPageTemplate() {
   const data = useAboutData();
   const { html } = data;
   return (
@@ -16,8 +16,7 @@ export function AboutPageTemplate(props) {
 
 AboutPageTemplate.propTypes = {};
 
-function AboutPage(props) {
-  console.log(props);
+function AboutPage() {
   return (
     <Layout>
       <AboutPageTemplate />

@@ -3,6 +3,10 @@ export const Root = styled.div`
   min-height: calc(100vh - 290px);
   padding: 0 calc((100vw - 600px) / 2);
 
+  @media (max-width: 400px) {
+    padding: 0 20px;
+  }
+
   h1,
   h2 {
     padding: 20px;
