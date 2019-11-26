@@ -2,7 +2,8 @@ import React from "react";
 import Logo from "./Logo";
 import styled from "styled-components";
 // import LogoSlider from "./LogoSlider";
-import SliderTest from "./BackgroundSlider";
+// import SliderTest from "./BackgroundSlider";
+import { Carousel } from "antd";
 
 const LogoList = ({ logoData }) => {
   //console.log(logoData);
@@ -15,7 +16,13 @@ const LogoList = ({ logoData }) => {
           })}
       </Root>
       {/* <LogoSlider logoData={logoData} /> */}
-      <SliderTest />
+      {/* <SliderTest /> */}
+      <CarouselWrapper autoplay dots={true}>
+        {logoData &&
+          logoData.map((item, idx) => {
+            return <Logo key={idx} image={item.image} link={item.link} />;
+          })}
+      </CarouselWrapper>
     </>
   );
 };
@@ -36,4 +43,9 @@ const Root = styled.div`
   @media (max-width: 400px) {
     display: none;
   }
+`;
+
+const CarouselWrapper = styled(Carousel)`
+  background: #f5f8fa;
+  padding: 70px 0;
 `;

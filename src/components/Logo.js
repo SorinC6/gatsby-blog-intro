@@ -16,8 +16,7 @@ export default Logo;
 
 const Root = styled.div`
  
-  background: transparent url("img/Component 1 – 1.png") 0% 0% no-repeat
-    padding-box;
+  background: transparent ;
   font-size: 30px;
   /* background-image:${props => `url(${props.image}`}  */
   a {
@@ -25,10 +24,19 @@ const Root = styled.div`
     text-decoration: none;
     color: grey;
   }
+  @media(max-width:400px){
+    display:flex;
+    justify-content:center;
+  }
+
 `;
 
 const SvgWrapper = styled(Logos)`
   font-size: 44px;
   width: 143px;
   height: 44px;
+
+  @media (max-width: 400px) {
+    font-size: 24px;
+  }
 `;

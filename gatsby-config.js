@@ -50,6 +50,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-styled-components",
+    "gatsby-plugin-antd",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
