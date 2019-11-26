@@ -1,8 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Image from "gatsby-image";
 
 const Intro = ({ introData }) => {
+  console.log(introData);
   return (
     <Root>
       <TopSection>{introData.heading}</TopSection>
@@ -15,6 +17,17 @@ const Intro = ({ introData }) => {
       </MainSection>
     </Root>
   );
+};
+
+export default Intro;
+
+Intro.propTypes = {
+  introData: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    subheading: PropTypes.string,
+    image: PropTypes.object
+  })
 };
 
 const Root = styled.div`
@@ -100,5 +113,3 @@ const ImageBox = styled(Image)`
     display: none;
   }
 `;
-
-export default Intro;

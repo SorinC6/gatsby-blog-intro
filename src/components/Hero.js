@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Image from "gatsby-image";
 
 const Hero = ({ heroData }) => {
-  console.log(heroData);
   return (
     <Root>
       <LeftSide>
@@ -19,9 +18,11 @@ const Hero = ({ heroData }) => {
 export default Hero;
 
 Hero.propTypes = {
-  heading: PropTypes.string,
-  image: PropTypes.object,
-  subheading: PropTypes.string
+  introData: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    subheading: PropTypes.string,
+    image: PropTypes.object
+  })
 };
 
 const Root = styled.div`
@@ -74,7 +75,6 @@ const LeftSide = styled.div`
 const ImageBox = styled(Image)`
   width: 384px;
   height: 371px;
-  background: transparent 0% 0% no-repeat padding-box;
   margin-left: 106px;
 
   @media (max-width: 400px) {
