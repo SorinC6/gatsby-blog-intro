@@ -27,6 +27,7 @@ const Btn = styled.button`
   margin-top: 100px;
   cursor: pointer;
   transition: 500ms;
+  outline: none;
 
   @media (max-width: 400px) {
     margin-top: 20px;

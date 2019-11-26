@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import BlogPage from "../../templates/blog-post";
+import ProductPage from "../../templates/products-page";
 
-const BlogPreview = ({ entry, widgetFor }) => (
-  <BlogPage
+const ProductPagePreview = ({ entry, widgetFor }) => (
+  <ProductPage
     page={{
       frontmatter: entry.getIn(["data"]).toJS(),
       html: entry.getIn(["data", "body"]),
@@ -12,11 +12,11 @@ const BlogPreview = ({ entry, widgetFor }) => (
   />
 );
 
-BlogPreview.propTypes = {
+ProductPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
   }),
   widgetFor: PropTypes.func
 };
 
-export default BlogPreview;
+export default ProductPagePreview;
