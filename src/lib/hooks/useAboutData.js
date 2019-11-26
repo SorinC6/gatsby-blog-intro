@@ -11,7 +11,6 @@ function useAboutData() {
             node {
               frontmatter {
                 title
-                path
               }
               html
             }
