@@ -1,11 +1,14 @@
 import React from "react";
 import { Root } from "../components/~common/basicPageStyles";
+import { useProductData } from "../lib/hooks";
 import Layout from "../components/Layout";
 
 export function ProductsPageTemplate({}) {
+  const data = useProductData();
+  const { html } = data;
   return (
     <Root>
-      <h1>Products Page</h1>
+      <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </Root>
   );
 }

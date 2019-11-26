@@ -5,6 +5,7 @@ import useLogoData from "./useLogoData";
 import useBlogData from "./useBlogData";
 import useSlug from "./useSlug";
 import useAboutData from "./useAboutData";
+import useProductData from "./useProductData";
 
 export {
   useSiteMetadata,
@@ -13,5 +14,6 @@ export {
   useLogoData,
   useBlogData,
   useSlug,
-  useAboutData
+  useAboutData,
+  useProductData
 };
