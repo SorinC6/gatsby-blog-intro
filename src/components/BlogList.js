@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BlogPreview from "./BlogPreview";
 import styled from "styled-components";
 import Button from "../components/Button";
@@ -6,20 +6,25 @@ import { Link } from "gatsby";
 //import { useSlug } from "../lib/hooks";
 
 const BlogList = ({ blogData }) => {
-  const handleClick = () => {};
+  const [nrOfBlogs, setNumberOfBlogs] = useState(4);
+  const handleClick = () => {
+    setNumberOfBlogs(nrOfBlogs + 4);
+  };
 
   return (
     <>
       <Root>
         {blogData &&
           blogData.map((item, index) => {
-            const { title, excerpt, image } = item.node.frontmatter;
-            const { slug } = item.node.fields;
-            return (
-              <Link to={slug} key={slug}>
-                <BlogPreview title={title} excerpt={excerpt} image={image} />
-              </Link>
-            );
+            if (index < nrOfBlogs) {
+              const { title, excerpt, image } = item.node.frontmatter;
+              const { slug } = item.node.fields;
+              return (
+                <Link to={slug} key={slug}>
+                  <BlogPreview title={title} excerpt={excerpt} image={image} />
+                </Link>
+              );
+            }
           })}
       </Root>
       <Button handleClick={handleClick} />

@@ -3,12 +3,10 @@ import { graphql, useStaticQuery } from "gatsby";
 function useLogoData() {
   const data = useStaticQuery(
     graphql`
-      query BlogQuery {
+      query BlogQuery($nrOfBlogs: Int) {
         allMarkdownRemark(
-          filter: {
-            frontmatter: { templateKey: { eq: "blog-post" } }
-            html: {}
-          }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          limit: $nrOfBlogs
         ) {
           edges {
             node {
