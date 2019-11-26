@@ -9,6 +9,8 @@ const GlobalStyle = createGlobalStyle`
   * {
       box-sizing: border-box;
       margin: 0;
+      font-family: 'Montserrat', sans-serif;
+
     }
     html,
     body {
@@ -28,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
     h4,
     h5,
     h6 {
+      font-weight:bold;
       color: #222;
       line-height: 1.1;
       + * {
@@ -50,13 +53,15 @@ function Layout(props) {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+          rel="stylesheet"
+        />
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        
       </Helmet>
       <GlobalStyle />
       <Header />
