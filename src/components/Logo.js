@@ -6,7 +6,7 @@ const Logo = ({ image, link }) => {
   return (
     <Root image={image}>
       <a href={link} target="_blank">
-        <SvgWrapper />
+        <Logos />
       </a>
     </Root>
   );
@@ -15,24 +15,17 @@ const Logo = ({ image, link }) => {
 export default Logo;
 
 const Root = styled.div`
- 
-  background: transparent ;
   font-size: 30px;
-  /* background-image:${props => `url(${props.image}`}  */
   a {
-    display:flex;
-    justify-content:center;
-    text-decoration: none;
-    color: grey;
+    display: flex;
+    justify-content: center;
   }
 `;
 
-const SvgWrapper = styled(Logos)`
-  font-size: 44px;
-  width: 143px;
-  height: 44px;
-
-  @media (max-width: 400px) {
-    font-size: 24px;
-  }
-`;
+// const SvgWrapper = styled(Logos)`
+//   /* font-size: 44px;
+//   width: 143px;
+//   height: 44px; */
+//   background: red;
+//   color: white;
+// `;
