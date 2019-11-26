@@ -3,9 +3,9 @@ templateKey: index-page
 title: Home
 hero:
   heading: Start New… Today!
-  image: /uploads/56256.jpg
   subheading: |
     Vivamus vestibulum elit efficitur, elementum sapien a, aliquet working??
+  image: /uploads/56256.jpg
 intro:
   description: >-
     Vivamus vestibulum elit efficitur, elementum sapien a, aliquet ipsum. Fusce
@@ -18,14 +18,13 @@ intro:
   image: /uploads/56217.jpg
 logos:
   - image: /uploads/logo.svg
-    link: 'https://example.com'
+    link: "https://example.com"
   - image: /uploads/logo.svg
     link: /about
   - image: /uploads/logo.svg
-    link: 'https://example.com'
+    link: "https://example.com"
   - image: /uploads/logo.svg
-    link: 'https://example.com'
+    link: "https://example.com"
   - image: /uploads/logo.svg
-    link: 'https://example.com'
+    link: "https://example.com"
 ---
-

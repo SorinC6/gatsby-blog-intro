@@ -12,6 +12,7 @@ function useHeroData() {
                 templateKey
                 hero {
                   heading
+                  subheading
                   image {
                     childImageSharp {
                       fluid {
@@ -19,7 +20,6 @@ function useHeroData() {
                       }
                     }
                   }
-                  subheading
                 }
               }
             }
