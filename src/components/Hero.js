@@ -10,7 +10,10 @@ const Hero = ({ heroData }) => {
         <h1>{heroData.heading}</h1>
         <p>{heroData.subheading}</p>
       </LeftSide>
-      <ImageBox fluid={heroData.image.childImageSharp.fluid} alt="dd" />
+      <ImageBox
+        fluid={heroData.image.childImageSharp.fluid}
+        alt={heroData.heading}
+      />
     </Root>
   );
 };

@@ -41,6 +41,7 @@ const BlogList = ({ blogData }) => {
                 </Link>
               );
             }
+            return null;
           })}
       </Root>
       <Button handleClick={handleClick} />

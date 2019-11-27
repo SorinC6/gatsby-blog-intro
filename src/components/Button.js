@@ -18,7 +18,7 @@ const Root = styled.div`
 const Btn = styled.button`
   width: 140px;
   height: 38px;
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background: #ffffff;
   border: 1px solid #3d86bf;
   border-radius: 32px;
   color: #3d86bf;

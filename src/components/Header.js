@@ -62,7 +62,7 @@ const Root = styled.header`
   justify-content: center;
   width: 100%;
   height: 60px;
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background: #ffffff ;
   box-shadow: 0px 2px 12px #0000001d;
 
   a {

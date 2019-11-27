@@ -20,12 +20,12 @@ const Root = styled.footer`
   align-items: center;
   width: 100%;
   height: 60px;
-  background: #4296cb 0% 0% no-repeat padding-box;
+  background: #4296cb;
   margin-top: 171px;
   color: white;
 
   p {
-    font-style: Bold 14px/18px Montserrat;
+    font-style: bold;
     font-size: 14px;
     margin: 0;
     padding-left: 30px;

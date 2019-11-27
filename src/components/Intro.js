@@ -8,7 +8,10 @@ const Intro = ({ introData }) => {
     <Root>
       <TopSection>{introData.heading}</TopSection>
       <MainSection>
-        <ImageBox fluid={introData.image.childImageSharp.fluid} alt="dd" />
+        <ImageBox
+          fluid={introData.image.childImageSharp.fluid}
+          alt={introData.heading}
+        />
         <RightSide>
           <h2>{introData.subheading}</h2>
           <p>{introData.description}</p>

@@ -6,7 +6,7 @@ import Logos from "../assets/logos.svg";
 const Logo = ({ image, link }) => {
   return (
     <Root image={image}>
-      <a href={link} target="_blank">
+      <a href={link} target="_blank" rel="noopener noreferrer">
         <Logos />
       </a>
     </Root>
@@ -27,11 +27,3 @@ const Root = styled.div`
     justify-content: center;
   }
 `;
-
-// const SvgWrapper = styled(Logos)`
-//   /* font-size: 44px;
-//   width: 143px;
-//   height: 44px; */
-//   background: red;
-//   color: white;
-// `;
