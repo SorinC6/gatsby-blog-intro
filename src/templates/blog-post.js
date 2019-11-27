@@ -66,6 +66,10 @@ const Root = styled.div`
     padding: 0 20px;
   }
 
+  h1 {
+    text-align: center;
+  }
+
   h1,
   h2 {
     padding: 20px;
