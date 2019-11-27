@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import moment from "moment";
@@ -16,19 +17,22 @@ export const query = graphql`
   }
 `;
 
-// export function BlogPostTemplate({ title, date, body }) {
-//   // not sure why post data its comming only in BlogPost component
-//   //console.log(props);
-//   return (
-//     <Root>
-//       <h1>{title}</h1>
-//       <h6>Posted on: {moment(date).format("MMMM Do YYYY, h:mm a")}</h6>
-//       <div dangerouslySetInnerHTML={{ __html: body }}></div>
-//     </Root>
-//   );
-// }
+export function BlogPostTemplate({ title, date, body }) {
+  // not sure why post data its comming only in BlogPost component
+  return (
+    <Root>
+      <h1>{title}</h1>
+      <h6>Posted on: {moment(date).format("MMMM Do YYYY, h:mm a")}</h6>
+      <div dangerouslySetInnerHTML={{ __html: body }}></div>
+    </Root>
+  );
+}
 
-// BlogPostTemplate.propTypes = {};
+BlogPostTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  body: PropTypes.string
+};
 
 function BlogPost({ data }) {
   //console.log(JSON.stringify(data, undefined, 4));
@@ -36,16 +40,22 @@ function BlogPost({ data }) {
   const { html } = data.markdownRemark;
   return (
     <Layout>
-      <Root>
-        <h1>{title}</h1>
-        <h6>Posted on: {moment(date).format("MMMM Do YYYY, h:mm a")}</h6>
-        <div dangerouslySetInnerHTML={{ __html: html }}></div>
-      </Root>
+      <BlogPostTemplate title={title} date={date} body={html} />
     </Layout>
   );
 }
 
-BlogPost.propTypes = {};
+BlogPost.propTypes = {
+  data: PropTypes.objectOf(
+    PropTypes.objectOf({
+      frontmatter: PropTypes.objectOf({
+        title: PropTypes.string.isRequired,
+        date: PropTypes.string
+      }),
+      html: PropTypes.string
+    })
+  )
+};
 
 export default BlogPost;
 
