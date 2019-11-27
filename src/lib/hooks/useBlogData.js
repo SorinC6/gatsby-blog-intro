@@ -5,8 +5,11 @@ function useLogoData() {
     graphql`
       query BlogQuery($nrOfBlogs: Int) {
         allMarkdownRemark(
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: {
+            frontmatter: { templateKey: { eq: "blog-post" }, date: {} }
+          }
           limit: $nrOfBlogs
+          sort: { order: DESC, fields: frontmatter___date }
         ) {
           edges {
             node {
