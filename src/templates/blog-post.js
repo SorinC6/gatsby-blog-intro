@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import moment from "moment";
 
 export const query = graphql`
-  query MyQuery($slug: String!) {
+  query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title

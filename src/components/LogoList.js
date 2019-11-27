@@ -30,7 +30,7 @@ const LogoList = ({ logoData }) => {
 export default LogoList;
 
 LogoList.propTypes = {
-  logoData: PropTypes.arrayOf(PropTypes.string)
+  logoData: PropTypes.arrayOf(PropTypes.object)
 };
 
 const Root = styled.div`
