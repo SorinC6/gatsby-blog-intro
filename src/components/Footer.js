@@ -27,6 +27,7 @@ const Root = styled.footer`
   p {
     font-style: Bold 14px/18px Montserrat;
     font-size: 14px;
+    margin: 0;
     padding-left: 30px;
   }
 `;
