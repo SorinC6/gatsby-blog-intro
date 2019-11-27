@@ -62,6 +62,10 @@ export default BlogPost;
 const Root = styled.div`
   padding: 0 calc((100vw - 600px) / 2);
 
+  @media (max-width: 400px) {
+    padding: 0 20px;
+  }
+
   h1,
   h2 {
     padding: 20px;
