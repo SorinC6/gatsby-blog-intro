@@ -9,7 +9,8 @@ const BlogPreview = ({ entry, widgetFor }) => (
       frontmatter: entry.getIn(["data"]).toJS(),
       html: entry.getIn(["data", "body"]),
       date: entry.getIn(["data", "date"]),
-      title: entry.getIn(["data", "title"])
+      title: entry.getIn(["data", "title"]),
+      bodyIsMarkdown: true
     }}
   />
 );
