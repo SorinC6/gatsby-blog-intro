@@ -3,7 +3,7 @@ import { useContactData } from "../lib/hooks";
 import { Root } from "../components/~common/basicPageStyles";
 import Layout from "../components/Layout";
 
-export function ContactPageTemplate({}) {
+export function ContactPageTemplate() {
   const data = useContactData();
   const { html } = data;
   return (

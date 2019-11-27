@@ -16,19 +16,19 @@ export const query = graphql`
   }
 `;
 
-export function BlogPostTemplate({ title, date, body }) {
-  // not sure why post data its comming only in BlogPost component
-  //console.log(props);
-  return (
-    <Root>
-      <h1>{title}</h1>
-      <h6>Posted on: {moment(date).format("MMMM Do YYYY, h:mm a")}</h6>
-      <div dangerouslySetInnerHTML={{ __html: body }}></div>
-    </Root>
-  );
-}
+// export function BlogPostTemplate({ title, date, body }) {
+//   // not sure why post data its comming only in BlogPost component
+//   //console.log(props);
+//   return (
+//     <Root>
+//       <h1>{title}</h1>
+//       <h6>Posted on: {moment(date).format("MMMM Do YYYY, h:mm a")}</h6>
+//       <div dangerouslySetInnerHTML={{ __html: body }}></div>
+//     </Root>
+//   );
+// }
 
-BlogPostTemplate.propTypes = {};
+// BlogPostTemplate.propTypes = {};
 
 function BlogPost({ data }) {
   //console.log(JSON.stringify(data, undefined, 4));
@@ -36,7 +36,11 @@ function BlogPost({ data }) {
   const { html } = data.markdownRemark;
   return (
     <Layout>
-      <BlogPostTemplate title={title} date={date} body={html} />
+      <Root>
+        <h1>{title}</h1>
+        <h6>Posted on: {moment(date).format("MMMM Do YYYY, h:mm a")}</h6>
+        <div dangerouslySetInnerHTML={{ __html: html }}></div>
+      </Root>
     </Layout>
   );
 }
