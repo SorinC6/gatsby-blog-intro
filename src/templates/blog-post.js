@@ -46,15 +46,15 @@ function BlogPost({ data }) {
 }
 
 BlogPost.propTypes = {
-  data: PropTypes.objectOf(
-    PropTypes.objectOf({
+  data: PropTypes.objectOf({
+    markdownRemark: PropTypes.objectOf({
       frontmatter: PropTypes.objectOf({
         title: PropTypes.string.isRequired,
         date: PropTypes.string
       }),
       html: PropTypes.string
     })
-  )
+  })
 };
 
 export default BlogPost;
