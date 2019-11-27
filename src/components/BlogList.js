@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import BlogPreview from "./BlogPreview";
 import styled from "styled-components";
@@ -7,19 +7,34 @@ import { Link } from "gatsby";
 //import { useSlug } from "../lib/hooks";
 
 const BlogList = ({ blogData }) => {
-  const [nrOfBlogs, setNumberOfBlogs] = useState(4);
+  const [nrOfBlogsDesktop, setNumberOfBlogsDesktop] = useState(4);
+  const [nrOfBlogsMobile, setNumberOfBlogsMobile] = useState(2);
+  const [screenWidth, setScreenWidth] = useState(0);
+  const ref = useRef(null);
+  useEffect(() => {
+    let width = ref.current ? ref.current.offsetWidth : 0;
+    setScreenWidth(width);
+  }, []);
   const handleClick = () => {
-    setNumberOfBlogs(nrOfBlogs + 4);
+    screenWidth > 400 && setNumberOfBlogsDesktop(nrOfBlogsDesktop + 4);
+    screenWidth <= 400 && setNumberOfBlogsMobile(nrOfBlogsMobile + 2);
   };
 
   return (
     <>
-      <Root>
+      <Root ref={ref}>
         {blogData &&
           blogData.map((item, index) => {
-            if (index < nrOfBlogs) {
-              const { title, excerpt, image } = item.node.frontmatter;
-              const { slug } = item.node.fields;
+            const { title, excerpt, image } = item.node.frontmatter;
+            const { slug } = item.node.fields;
+            if (index < nrOfBlogsDesktop && screenWidth > 400) {
+              return (
+                <Link to={slug} key={slug}>
+                  <BlogPreview title={title} excerpt={excerpt} image={image} />
+                </Link>
+              );
+            }
+            if (index < nrOfBlogsMobile && screenWidth <= 400) {
               return (
                 <Link to={slug} key={slug}>
                   <BlogPreview title={title} excerpt={excerpt} image={image} />
