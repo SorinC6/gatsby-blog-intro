@@ -33,6 +33,7 @@ const Root = styled.article`
 
   &:hover {
     box-shadow: 0px 2px 16px #394e5d36;
+    border-radius: 4px;
     cursor: pointer;
   }
 
@@ -40,8 +41,10 @@ const Root = styled.article`
     margin-top: 21px;
     font-size: 20px;
     color: #394e5d;
-    padding: 0 10px 10px 10px;
+    padding: 9px 10px 10px 10px;
     font-weight: 600;
+    margin: 0;
+    margin-top: 10px;
   }
 
   p {
@@ -49,5 +52,7 @@ const Root = styled.article`
     color: #182333;
     padding: 0 10px;
     font-weight: 300;
+    margin: 0;
+    padding-bottom: 9px;
   }
 `;
